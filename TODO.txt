@@ -1,0 +1,51 @@
+TODO
+====
+
+Current TODO list for tinyOS:
+
+Functionality:
+
+  - Interrupts:
+    - Implement a GICv3 driver.
+    - Only needed for virtio.
+
+  - Memory Management:
+    - Enable the MMU
+    - Only enable in tBoot, not tinyROM.
+    - Mappings:
+      - R/W disabled in ROM region
+      - tBoot region should only be R/W in EL3.
+
+  - Backtrace
+    - Look into how a backtrace can be implemented.
+    - Hardware or software implementation.
+
+  - Booting:
+    - 'firmwareN' devices should only be registered if they have an image there.
+    - All boot images should be wrapped in a tinyImage header.
+    - Boot target support:
+      - Linux
+      - U-Boot
+      - XNU
+      - Memory (generic)
+
+  - Command line tools:
+    - bdev      -   view information of active block devices
+    - bootdev   -   view information of active boot devices (and what they are)
+    - serial    -   view information of active serial interfaces
+    - bdinfo    -   view platform/board information
+
+  - Secure Monitor
+    - Outline design for secure monitor
+    
+  - Testing:
+    - Memory management tests
+    - Serial tests
+    - Storage tests
+
+  - Documentation:
+    - Document various design aspects and implementation spec of the system:
+      - Memory management
+      - Drivers
+      - Storage interfaces
+      - Serial interfaces
