@@ -19,6 +19,24 @@ on the QEMU Cortex-A76 platform.
 
 You can find the tinyKern repository on my Github page.
 
+0. Building
+-----------
+
+To build tinyBoot, you'll need the aarch64-none-elf toolchain from ARM's website,
+which you can find here: https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads.
+
+Create a build folder, and run CMake with the following options:
+
+$ cmake .. -DCMAKE_BUILD_TYPE=Debug -DTARGET_PLATFORM=virt -DTOOLCHAIN=<path>
+$ make
+
+You'll want to set TINYROM_FIRMWARE to the tinyROM.img binary, and TBOOT_FIRMWARE
+to the tBoot.img firmware, do not use the ELF files.
+
+You can then boot tinyOS in QEMU by running the boot.sh script. If you'd like to
+try loading a linux kernel, pass this as KERNEL_IMAGE and ensure the correct
+option is set in bootm.c to prepare the kernel.
+
 1. tinyBoot overview
 ---------------------
 

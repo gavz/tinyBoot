@@ -37,7 +37,6 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE   STATIC_LIBRARY)
 project("tinyOS" VERSION 0.0.1 LANGUAGES C ASM)
 
 # Compiler Setup
-set(TOOLCHAIN "/Users/h3/Work/toolchains/arm-gnu-toolchain-12.2.rel1-darwin-arm64-aarch64-none-elf/bin")
 set(CMAKE_C_COMPILER    ${TOOLCHAIN}/aarch64-none-elf-gcc)
 set(CMAKE_ASM_COMPILER  ${TOOLCHAIN}/aarch64-none-elf-gcc)
 set(CMAKE_LINKER        ${TOOLCHAIN}/aarch64-none-elf-ld)
